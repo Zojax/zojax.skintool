@@ -1,0 +1,85 @@
+=======
+CHANGES
+=======
+
+1.2.0 (2009-08-11)
+------------------
+
+- Added skin configurable schema
+
+- Change copyright holder
+
+- Check is skin exists, if not use zojax as default
+
+- Do not use z3c.autoinclude
+
+
+1.1.2 (2009-01-26)
+------------------
+
+- Use custom fields for schema
+
+
+1.1.1 (2008-12-03)
+------------------
+
+- Do not use _v_skin attribute
+
+
+1.1.0 (2008-11-21)
+------------------
+
+- Added zojax:skin directive
+
+- API refactored
+
+- Added translations: nl, ru
+
+
+1.0.2 (2008-08-07)
+------------------
+
+- Added INoSkinSwitching for skin that does not allow skin switching
+
+
+1.0.1 (2008-05-16)
+------------------
+
+- Replace 'autoinclude' with 'includeDependendcies'
+
+
+1.0.0 (2008-03-28)
+------------------
+
+- Code cleanup
+
+- Added tests
+
+- Code moved to svn.zope.org
+
+
+0.13 (2008-02-28)
+----------------
+
+- Use z3c.autoinclude
+
+- Do not generate InterfaceClass object, just apply list of layers
+
+
+0.12 (2008-02-08)
+-----------------
+
+- Code cleanup
+
+
+0.11 (2008-02-06)
+------------------
+
+- Added ISkinable marker interface.
+  Now object should implement ISkinable implicitly to support skintool
+
+
+0.10 (2008-02-01)
+------------------
+
+- Initial release.

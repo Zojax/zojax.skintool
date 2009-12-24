@@ -1,0 +1,19 @@
+<configure
+   xmlns="http://namespaces.zope.org/zope"
+   xmlns:meta="http://namespaces.zope.org/meta">
+
+  <meta:directives namespace="http://namespaces.zope.org/zojax">
+
+    <meta:directive
+       name="skin"
+       schema=".zcml.ISkinDirective"
+       handler=".zcml.skinDirectiveHandler" />
+
+    <meta:directive
+       name="layer"
+       schema=".zcml.ILayerDirective"
+       handler=".zcml.layerDirectiveHandler" />
+
+  </meta:directives>
+
+</configure>

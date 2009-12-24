@@ -1,0 +1,53 @@
+<configure
+   xmlns="http://namespaces.zope.org/zope"
+   xmlns:i18n="http://namespaces.zope.org/i18n"
+   xmlns:zojax="http://namespaces.zope.org/zojax"
+   i18n_domain="zojax.skintool">
+
+  <!-- set default skin -->
+  <subscriber handler=".subscribers.threadServiceSubscriber" />
+
+  <!-- layers changed -->
+  <subscriber handler=".tool.skinToolModified" />
+
+  <!-- vocabularies -->
+  <utility
+     name="zojax skins"
+     factory=".vocabulary.SkinsVocabulary" />
+
+  <utility
+     name="zojax layers"
+     factory=".vocabulary.LayersVocabulary" />
+
+  <!-- configlet -->
+  <zojax:configlet
+     name="ui.portalskin"
+     title="Portal skin"
+     description="Portal skin configuration."
+     class=".tool.SkinTool"
+     schema=".interfaces.ISkinTool" />
+
+  <zojax:pagelet
+     name="index.html"
+     for=".interfaces.ISkinTool"
+     class=".tool.ConfigletEditForm"
+     permission="zope.Public" />
+
+  <!-- edit schema -->
+  <zojax:pagelet
+     name="schema"
+     type="form.subform"
+     for=".interfaces.ISkinTool *"
+     class=".tool.SchemaEditForm"
+     weight="10" />
+
+  <!-- translations -->
+  <i18n:registerTranslations directory="locales"/>
+
+  <!-- generations -->
+  <utility
+     name="zojax.skintool"
+     provides="zope.app.generations.interfaces.ISchemaManager"
+     component=".generations.schemaManager" />
+
+</configure>

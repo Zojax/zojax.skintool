@@ -1,0 +1,19 @@
+<configure
+   xmlns="http://namespaces.zope.org/zope"
+   xmlns:zojax="http://namespaces.zope.org/zojax"
+   i18n_domain="zope">
+
+  <interface
+     name="DefaultSkin"
+     interface=".tests.IDefaultSkin"
+     type="zope.publisher.interfaces.browser.IBrowserSkinType" />
+
+  <!-- skintool -->
+  <zojax:skin
+     name="Test Skin"
+     layer=".tests.ITestSkin"
+     title="test theme"
+     description="Test theme"
+     schema=".interfaces.ITestSkinSchema" />
+
+</configure>

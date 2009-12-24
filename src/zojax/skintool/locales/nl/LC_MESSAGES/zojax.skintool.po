@@ -1,0 +1,76 @@
+# #############################################################################
+#
+# Copyright (c) 2003-2004 Zope Foundation and Contributors.
+# All Rights Reserved.
+#
+# This software is subject to the provisions of the Zope Public License,
+# Version 2.1 (ZPL).  A copy of the ZPL should accompany this distribution.
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY AND ALL EXPRESS OR IMPLIED
+# WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+# WARRANTIES OF TITLE, MERCHANTABILITY, AGAINST INFRINGEMENT, AND FITNESS
+# FOR A PARTICULAR PURPOSE.
+#
+# #############################################################################
+msgid ""
+msgstr ""
+"Project-Id-Version: Development/Unknown\n"
+"POT-Creation-Date: Fri Nov 21 12:01:17 2008\n"
+"PO-Revision-Date: 2008-11-20 22:23+0100\n"
+"Last-Translator: F. Kooman <fkooman@tuxed.net>\n"
+"Language-Team: Zope 3 Developers <zope3-dev@zope.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: zope/app/locales/extract.py\n"
+
+#: src/zojax/skintool/configlet.pt:11
+msgid "Please select portal skin."
+msgstr "Kies een weergave."
+
+#: src/zojax/skintool/configlet.pt:28
+msgid "Please select layers."
+msgstr "Kies lagen."
+
+#: src/zojax/skintool/configlet.pt:45
+msgid "Save"
+msgstr "Opslaan"
+
+#: src/zojax/skintool/configlet.pt:50
+msgid "There are no any configurable skins or layers."
+msgstr ""
+
+#: src/zojax/skintool/configlet.py:42
+msgid "No skin"
+msgstr "Geen weergave"
+
+#: src/zojax/skintool/configlet.py:44
+msgid "Do not use any skin."
+msgstr ""
+
+#: src/zojax/skintool/configlet.py:71
+msgid "Changes has been saved."
+msgstr "Wijzigingen zijn opgeslagen."
+
+#: src/zojax/skintool/configure.zcml:23
+msgid "Portal skin"
+msgstr "Websiteweergave"
+
+#: src/zojax/skintool/configure.zcml:23
+msgid "Portal skin configuration."
+msgstr "Websiteweergave configuratie."
+
+#: src/zojax/skintool/interfaces.py:46 src/zojax/skintool/configlet.pt:10
+msgid "Skin"
+msgstr "Weergave"
+
+#: src/zojax/skintool/interfaces.py:47
+msgid "Select portal skin."
+msgstr "Selecteer een website weergave."
+
+#: src/zojax/skintool/interfaces.py:52 src/zojax/skintool/configlet.pt:27
+msgid "Layers"
+msgstr "Lagen"
+
+#: src/zojax/skintool/interfaces.py:53
+msgid "Select skin layers."
+msgstr "Selecteer weergavelagen."

@@ -1,0 +1,54 @@
+====================
+Personal preferences
+====================
+
+  >>> from zope import component, interface, event
+  >>> from zope.app.component.hooks import setSite
+
+  >>> from zojax.skintool.interfaces import ISkinTool
+
+  >>> root = getRootFolder()
+  >>> setSite(root)
+
+  >>> configlet = component.getUtility(ISkinTool)
+  >>> configlet.skinData
+
+We have no data cause we haven't defined schema
+
+  >>> configlet.skin
+
+  >>> configlet.skin = 'Test Skin'
+
+  >>> configlet.skinData
+  <zojax.skintool.skindatatype.SkinData<ui.portalskin.skindata> ...
+
+  >>> configlet.skinData.param1
+  u'1'
+
+Browser
+
+  >>> from zope.testbrowser.testing import Browser
+
+  >>> admin = Browser()
+  >>> admin.handleErrors = False
+  >>> admin.addHeader("Authorization", "Basic mgr:mgrpw")
+
+  >>> admin.open("http://localhost/settings/")
+  >>> admin.getLink('Portal skin').click()
+
+  >>> admin.getControl('Param 1').value
+  '1'
+  >>> admin.getControl('Param 1').value = 'Nikolay'
+  >>> admin.getControl(name="form.buttons.save").click()
+
+  >>> admin.open("http://localhost/settings/")
+  >>> admin.getLink('Portal skin').click()
+
+  >>> admin.getControl('Param 1').value
+  'Nikolay'
+
+
+We see changes in tool
+
+  >>> configlet.skinData.param1
+  u'Nikolay'
